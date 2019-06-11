@@ -27,6 +27,11 @@
 		D104469D22AF98E80090A709 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104469C22AF98E80090A709 /* SettingsViewController.swift */; };
 		D10446A122AFBD780090A709 /* EditingProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A022AFBD780090A709 /* EditingProjectViewController.swift */; };
 		D10446A322AFCCE20090A709 /* EditingTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A222AFCCE20090A709 /* EditingTasksViewController.swift */; };
+		D10446A522AFCF7C0090A709 /* TaskDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A422AFCF7C0090A709 /* TaskDatePickerView.swift */; };
+		D10446A722AFD5590090A709 /* PorojectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A622AFD5590090A709 /* PorojectPicker.swift */; };
+		D10446A922AFD5BF0090A709 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A822AFD5BF0090A709 /* DataHandler.swift */; };
+		D10446AB22AFD9FD0090A709 /* TaskDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446AA22AFD9FD0090A709 /* TaskDateFormatter.swift */; };
+		D10446AE22AFE6990090A709 /* EditEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446AD22AFE6990090A709 /* EditEmployeeViewController.swift */; };
 		D175E47522AF862300D70C0C /* ManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175E47422AF862300D70C0C /* ManagerProtocol.swift */; };
 		D1E61C4322AE9B3F00F668D1 /* MenuHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E61C4222AE9B3F00F668D1 /* MenuHandlerDelegate.swift */; };
 		D1E61C4822AEA78000F668D1 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E61C4722AEA78000F668D1 /* TasksViewController.swift */; };
@@ -65,6 +70,11 @@
 		D104469C22AF98E80090A709 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D10446A022AFBD780090A709 /* EditingProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingProjectViewController.swift; sourceTree = "<group>"; };
 		D10446A222AFCCE20090A709 /* EditingTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTasksViewController.swift; sourceTree = "<group>"; };
+		D10446A422AFCF7C0090A709 /* TaskDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDatePickerView.swift; sourceTree = "<group>"; };
+		D10446A622AFD5590090A709 /* PorojectPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorojectPicker.swift; sourceTree = "<group>"; };
+		D10446A822AFD5BF0090A709 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		D10446AA22AFD9FD0090A709 /* TaskDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDateFormatter.swift; sourceTree = "<group>"; };
+		D10446AD22AFE6990090A709 /* EditEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmployeeViewController.swift; sourceTree = "<group>"; };
 		D175E47422AF862300D70C0C /* ManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerProtocol.swift; sourceTree = "<group>"; };
 		D1E61C4222AE9B3F00F668D1 /* MenuHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHandlerDelegate.swift; sourceTree = "<group>"; };
 		D1E61C4722AEA78000F668D1 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +120,7 @@
 		C42938CC22AE64D5000573BC /* trainingtask */ = {
 			isa = PBXGroup;
 			children = (
+				D10446A822AFD5BF0090A709 /* DataHandler.swift */,
 				D104469B22AF987B0090A709 /* Settings */,
 				D175E47322AF809200D70C0C /* Employees */,
 				D1E61C4422AEA3E800F668D1 /* Menu */,
@@ -133,6 +144,16 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		D10446AC22AFE2AC0090A709 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				D10446A622AFD5590090A709 /* PorojectPicker.swift */,
+				D10446AA22AFD9FD0090A709 /* TaskDateFormatter.swift */,
+				D10446A422AFCF7C0090A709 /* TaskDatePickerView.swift */,
+			);
+			name = DatePicker;
+			sourceTree = "<group>";
+		};
 		D175E47322AF809200D70C0C /* Employees */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +163,7 @@
 				D1F84CE222AF8DC500F36C77 /* EmployeeCell.xib */,
 				D1F84CE422AF90BE00F36C77 /* EmployeesManager.swift */,
 				C42938ED22AE7936000573BC /* Employee.swift */,
+				D10446AD22AFE6990090A709 /* EditEmployeeViewController.swift */,
 			);
 			name = Employees;
 			sourceTree = "<group>";
@@ -176,6 +198,7 @@
 		D1E61C4622AEA73F00F668D1 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				D10446AC22AFE2AC0090A709 /* DatePicker */,
 				C42938EB22AE7864000573BC /* Task.swift */,
 				D1E61C4722AEA78000F668D1 /* TasksViewController.swift */,
 				D1E61C4B22AEAA4300F668D1 /* TasksTableView.swift */,
@@ -265,6 +288,7 @@
 			files = (
 				C42938EE22AE7936000573BC /* Employee.swift in Sources */,
 				D10446A122AFBD780090A709 /* EditingProjectViewController.swift in Sources */,
+				D10446A922AFD5BF0090A709 /* DataHandler.swift in Sources */,
 				D1F84CE522AF90BE00F36C77 /* EmployeesManager.swift in Sources */,
 				C42938F222AE881E000573BC /* ProjectsTableView.swift in Sources */,
 				C42938EC22AE7864000573BC /* Task.swift in Sources */,
@@ -284,11 +308,15 @@
 				C42938F022AE8572000573BC /* ProjectsManager.swift in Sources */,
 				C42938EA22AE7230000573BC /* Project.swift in Sources */,
 				C42938E622AE6CB6000573BC /* MenuManager.swift in Sources */,
+				D10446A522AFCF7C0090A709 /* TaskDatePickerView.swift in Sources */,
 				D1E61C5022AEAD8300F668D1 /* TaskCell.swift in Sources */,
 				D1F84CDD22AF8B9500F36C77 /* EmployeesViewController.swift in Sources */,
 				D1E61C4E22AEABA000F668D1 /* TaskState.swift in Sources */,
+				D10446AE22AFE6990090A709 /* EditEmployeeViewController.swift in Sources */,
 				D10446A322AFCCE20090A709 /* EditingTasksViewController.swift in Sources */,
 				D104469D22AF98E80090A709 /* SettingsViewController.swift in Sources */,
+				D10446A722AFD5590090A709 /* PorojectPicker.swift in Sources */,
+				D10446AB22AFD9FD0090A709 /* TaskDateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

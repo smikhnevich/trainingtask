@@ -9,7 +9,13 @@ class TasksManager: NSObject, ManagerProtocol {
     override init() {
         super.init()
         for i in 0..<5 {
-            let task = Task(statusImage: "\(i)", name: "\(i)", projectName: "\(i)")
+            var task = Task(statusImage: "\(i)", name: "\(i)", projectName: "\(i)")
+            if i%2 == 0{
+                task.statusImage = "active"
+            }
+            else {
+                task.statusImage = "closed"
+            }
             tasks.append(task)
         }
     }

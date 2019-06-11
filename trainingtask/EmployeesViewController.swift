@@ -12,8 +12,5 @@ class EmployeesViewController: UIViewController {
         employeesTableView.delegate = employeesManager
         employeesTableView.dataSource = employeesManager
     }
-    @IBAction func addEmployee(_ sender: Any) {
-        
-    }
     
 }
