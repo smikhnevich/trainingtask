@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="U3F-Yr-PPL" customClass="MainMenuOptionCell" customModule="trainingtask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U3F-Yr-PPL" id="Xzc-nx-Qli">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jut-YP-xJ3">
+                        <rect key="frame" x="20" y="10" width="350" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Dhr-y3-h1R"/>
+                            <constraint firstAttribute="width" constant="350" id="ayJ-q1-YcV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jut-YP-xJ3" secondAttribute="trailing" constant="20" id="9vF-8K-yUr"/>
+                    <constraint firstItem="jut-YP-xJ3" firstAttribute="centerY" secondItem="Xzc-nx-Qli" secondAttribute="centerY" id="LNb-Qo-Vn5"/>
+                    <constraint firstItem="jut-YP-xJ3" firstAttribute="centerX" secondItem="Xzc-nx-Qli" secondAttribute="centerX" id="LWZ-1s-pj4"/>
+                    <constraint firstItem="jut-YP-xJ3" firstAttribute="top" secondItem="Xzc-nx-Qli" secondAttribute="top" constant="10" id="Qe1-W8-yEx"/>
+                    <constraint firstAttribute="bottom" secondItem="jut-YP-xJ3" secondAttribute="bottom" constant="10" id="gAB-Xr-5fV"/>
+                    <constraint firstItem="jut-YP-xJ3" firstAttribute="leading" secondItem="Xzc-nx-Qli" secondAttribute="leading" constant="20" id="gMm-RP-cuM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="optionNameLabel" destination="jut-YP-xJ3" id="ehv-Ko-aUE"/>
+            </connections>
+            <point key="canvasLocation" x="117.39130434782609" y="75"/>
+        </tableViewCell>
+    </objects>
+</document>
