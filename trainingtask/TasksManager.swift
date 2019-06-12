@@ -2,31 +2,30 @@ import UIKit
 
 class TasksManager: NSObject, ManagerProtocol {
     
-    private var tasks = [Task]()
     
     private let cellIdentifier = "task"
+    private var database: Database?
+    
+    private func connectToDataServer() {
+        let delegate = UIApplication.shared.delegate
+        let appDelegate = delegate as! AppDelegate
+        database = appDelegate.databaseConnection
+    }
     
     override init() {
         super.init()
-        for i in 0..<5 {
-            var task = Task(statusImage: "\(i)", name: "\(i)", projectName: "\(i)")
-            if i%2 == 0{
-                task.statusImage = "active"
-            }
-            else {
-                task.statusImage = "closed"
-            }
-            tasks.append(task)
-        }
+        connectToDataServer()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        let tasksCount = database!.loadTasksCountFromServer()
+        return tasksCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! TaskCell
-        cell.setTaskInfo(info: tasks[indexPath.item])
+        let task = database!.loadTaskFromServer(at: indexPath.item)
+        cell.setTaskInfo(info: task)
         return cell
     }
     

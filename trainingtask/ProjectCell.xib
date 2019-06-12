@@ -32,17 +32,17 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="38" id="gHR-WU-GZY"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Shw-vK-ogc" firstAttribute="top" secondItem="GmS-RC-si9" secondAttribute="bottom" constant="1.5" id="3vO-Hf-Rfr"/>
+                    <constraint firstAttribute="bottom" secondItem="Shw-vK-ogc" secondAttribute="bottom" id="4rh-Um-QY7"/>
                     <constraint firstItem="GmS-RC-si9" firstAttribute="leading" secondItem="xH7-C0-TIt" secondAttribute="leading" constant="10" id="JZj-pk-2mF"/>
                     <constraint firstAttribute="trailing" secondItem="Shw-vK-ogc" secondAttribute="trailing" constant="10" id="Jxo-Yw-og6"/>
                     <constraint firstItem="Shw-vK-ogc" firstAttribute="leading" secondItem="xH7-C0-TIt" secondAttribute="leading" constant="10" id="WN2-Ah-GtK"/>
-                    <constraint firstAttribute="bottom" secondItem="Shw-vK-ogc" secondAttribute="bottom" id="boy-5q-iAc"/>
                     <constraint firstItem="GmS-RC-si9" firstAttribute="top" secondItem="xH7-C0-TIt" secondAttribute="top" id="cf5-Qe-Ys9"/>
                     <constraint firstAttribute="trailing" secondItem="GmS-RC-si9" secondAttribute="trailing" constant="10" id="pwS-jZ-NwM"/>
                 </constraints>

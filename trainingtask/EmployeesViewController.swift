@@ -8,9 +8,12 @@ class EmployeesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         employeesTableView.delegate = employeesManager
         employeesTableView.dataSource = employeesManager
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        employeesTableView.reloadData()
     }
     
 }

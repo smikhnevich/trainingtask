@@ -77,8 +77,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="firstNameLabel" destination="3ag-dc-ZLk" id="adO-IQ-Dxp"/>
-                <outlet property="lastNameLabel" destination="dDH-KT-UZD" id="LNk-k0-bfT"/>
+                <outlet property="firstNameLabel" destination="dDH-KT-UZD" id="sOy-HA-P1x"/>
+                <outlet property="lastNameLabel" destination="3ag-dc-ZLk" id="c1a-Y5-asp"/>
                 <outlet property="patronymicLabel" destination="Uec-N3-D3L" id="pd4-XD-UC0"/>
                 <outlet property="positionLabel" destination="frt-qn-Vrc" id="eYa-Vo-8qf"/>
             </connections>

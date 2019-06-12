@@ -12,9 +12,4 @@ class TasksViewController: UIViewController {
         tasksTableView.dataSource = tasksHandler
     }
     
-    @IBAction func addTask(_ sender: Any) {
-        
-    }
-    
-    
 }

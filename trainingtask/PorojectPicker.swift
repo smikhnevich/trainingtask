@@ -2,8 +2,6 @@ import UIKit
 
 class ProjectPicker: UIPickerView {
     
-    let dataHandler = DataHandler()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
@@ -15,8 +13,8 @@ class ProjectPicker: UIPickerView {
     }
     
     func setUp(){
-        delegate = dataHandler
-        dataSource = dataHandler
+        //delegate = dataHandler
+        //dataSource = dataHandler
     }
     
     

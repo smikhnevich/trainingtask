@@ -2,9 +2,11 @@ import UIKit
 
 class TaskDateFormatter: DateFormatter {
     
+    let format = "MMM d, yyyy"
+    
     override init() {
         super.init()
-        
+        dateFormat = format
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -15,10 +17,10 @@ class TaskDateFormatter: DateFormatter {
         return TimeInterval(days*24*60*60)
     }
     
-    func addDefaultDaysNumber() -> Date{
+    func addDefaultDaysNumberToDate(date: Date) -> Date{
         let daysNumber = 30
         let timeInterval = daysToTimeInterval(days: daysNumber)
-        let endDate = Date(timeIntervalSinceNow: timeInterval)
+        let endDate = Date(timeInterval: timeInterval, since: date)
         return endDate
     }
     
