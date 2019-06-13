@@ -3,12 +3,12 @@ import UIKit
 class EditingTasksViewController: UIViewController, DateEnteringFieldDelegate {
     
     @IBOutlet weak var taskNameField: UIView!
-    @IBOutlet weak var tasksProjectNamePicker: UIView!
+    @IBOutlet weak var tasksProjectNameField: ProjectInputField!
     @IBOutlet weak var numberOfNeededHoursField: UIView!
     @IBOutlet weak var startDatePicker: DateEnteringField!
     @IBOutlet weak var endDatePicker: DateEnteringField!
     @IBOutlet weak var statusPicker: UIView!
-    @IBOutlet weak var executorPicker: UIView!
+    @IBOutlet weak var executorPicker: EmployeeInputField!
     
     let dateFormatter = TaskDateFormatter()
     
@@ -17,8 +17,16 @@ class EditingTasksViewController: UIViewController, DateEnteringFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        
         //для отключения возможности взаимодействия
         //tasksProjectName.isUserInteractionEnabled = false
+    }
+    
+    private func setDefaults() {
+        let date = Date()
+        let newDate = dateFormatter.addDefaultDaysNumberToDate(date: date)
+        startDatePicker.setDate(date: date)
+        endDatePicker.setDate(date: newDate)
     }
     
     /*
@@ -53,14 +61,11 @@ class EditingTasksViewController: UIViewController, DateEnteringFieldDelegate {
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
+ 
     func endEditing(_ field: DateEnteringField) {
         let date = startDatePicker.selectedDate()
         let defaultEndDate = dateFormatter.addDefaultDaysNumberToDate(date: date)
-        let dateString = dateFormatter.string(from: defaultEndDate)
-        print(dateString)
+        endDatePicker.setDate(date: defaultEndDate)
     }
-    
-    
     
 }

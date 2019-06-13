@@ -7,25 +7,24 @@ class ProjectsManager: NSObject, ManagerProtocol {
     
     private var database: Database?
     
-    private func connectToDataServer() {
+    private func connectToDataServer() -> Database {
         let delegate = UIApplication.shared.delegate
         let appDelegate = delegate as! AppDelegate
-        database = appDelegate.databaseConnection
+        return appDelegate.databaseConnection
     }
     
     override init(){
         super.init()
-        connectToDataServer()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let projectsCount = database!.loadProjectsCountFromServer()
+        let projectsCount = connectToDataServer().loadProjectsCountFromServer()
         return projectsCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! ProjectCell
-        let project = database!.loadProjectFromServer(at: indexPath.item)
+        let project = connectToDataServer().loadProjectFromServer(at: indexPath.item)
         cell.setProjectInfo(info: project)
         return cell
     }

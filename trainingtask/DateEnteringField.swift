@@ -1,11 +1,11 @@
 import UIKit
 
-class DateEnteringField: UIView, UITextFieldDelegate, DatePickerToolBarDelegate {
+class DateEnteringField: UIView, TaskEditorToolBarDelegate {
     
     @IBOutlet weak var dateInputField: UITextField!
     
     private var nibName = "DateEnteringField"
-    private let heightForToolBar = CGFloat(35)
+    private let heightForToolBar = CGFloat(40)
     
     private let datePickerView = UIDatePicker()
     private var toolBar = DatePickerToolBar()
@@ -18,10 +18,23 @@ class DateEnteringField: UIView, UITextFieldDelegate, DatePickerToolBarDelegate 
         super.init(frame: frame)
         setUpToolBar()
         setUp()
+        dateInputField.keyboardType = .decimalPad
     }
     
     func selectedDate() -> Date {
-        return datePickerView.date
+        if let dateString = dateInputField.text {
+            if !dateString.isEmpty{
+                let date = dateFormatter.date(from: dateString)
+                return date!
+            }
+            else {
+                return Date()
+            }
+        }
+        else{
+            return Date()
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,7 +55,6 @@ class DateEnteringField: UIView, UITextFieldDelegate, DatePickerToolBarDelegate 
     private func setUp() {
         let view = loadFromNib()
         view.frame = bounds
-        dateInputField.delegate = self
         toolBar.delegate = self
         dateInputField.inputAccessoryView = toolBar
         addSubview(view)
@@ -51,28 +63,40 @@ class DateEnteringField: UIView, UITextFieldDelegate, DatePickerToolBarDelegate 
     private func setUpToolBar() {
         toolBar = DatePickerToolBar(frame: CGRect(x: 0, y: 0, width: bounds.width, height: heightForToolBar))
     }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        dateInputField.resignFirstResponder()
-        return true
+    
+    private func setDateFromDatePicker() {
+        let date = datePickerView.date
+        let stringDate = dateFormatter.string(from: date)
+        dateInputField.text = stringDate
     }
     
     func readyButtonPressed() {
+        if dateInputField.inputView != nil {
+            setDateFromDatePicker()
+        }
+        delegate?.endEditing?(self)
         dateInputField.resignFirstResponder()
     }
     
-    func switchToDatePicker() {
+    func switchToList() {
         dateInputField.resignFirstResponder()
         datePickerView.datePickerMode = UIDatePicker.Mode.date
         dateInputField.inputView = datePickerView
+        setDate(date: Date())
         datePickerView.addTarget(self, action: #selector(valueChanged), for: UIControl.Event.valueChanged)
         dateInputField.becomeFirstResponder()
     }
     
-    func switchToKeyBoard() {
+    func switchToKeyboard() {
         dateInputField.resignFirstResponder()
+        dateInputField.text?.removeAll()
         dateInputField.inputView = nil
         dateInputField.becomeFirstResponder()
+    }
+    
+    func setDate(date: Date) {
+        let stringDate = dateFormatter.string(from: date)
+        dateInputField.text = stringDate
     }
     
     @objc func valueChanged(){

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,29 +10,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerToolBar" customModule="trainingtask" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectInputToolBar" customModule="trainingtask" customModuleProvider="target">
             <connections>
-                <outlet property="switchButton" destination="Y7j-ld-vQ9" id="KYq-C0-1St"/>
+                <outlet property="switchButton" destination="FwX-dJ-4a5" id="5dd-g2-Qsi"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="XXQ-hP-pRG">
+        <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="Bbp-tm-1mo">
             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yr7-w6-GUM">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuL-yo-pVc">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <items>
-                        <barButtonItem title="Календарь" id="Y7j-ld-vQ9">
+                        <barButtonItem title="Список" id="FwX-dJ-4a5">
                             <connections>
-                                <action selector="switchModeButtonPressed:" destination="-1" id="Sbs-L9-ZgV"/>
+                                <action selector="switchModeButtonPressed:" destination="-1" id="g14-4s-DiV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vIs-DY-KVs"/>
-                        <barButtonItem title="Готово" id="320-3V-DpK">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7E8-Ms-VS9"/>
+                        <barButtonItem title="Готово" id="Aqb-sl-0R5">
                             <connections>
-                                <action selector="readyButtonPressed:" destination="-1" id="yjQ-Gy-7hv"/>
+                                <action selector="readyButtonPressed:" destination="-1" id="wO7-7s-cAF"/>
                             </connections>
                         </barButtonItem>
                     </items>
@@ -40,14 +40,14 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="yr7-w6-GUM" firstAttribute="top" secondItem="XXQ-hP-pRG" secondAttribute="top" id="5Ph-6S-4H3"/>
-                <constraint firstItem="yr7-w6-GUM" firstAttribute="leading" secondItem="VYb-sg-SNC" secondAttribute="leading" id="7yx-3a-bUv"/>
-                <constraint firstAttribute="bottom" secondItem="yr7-w6-GUM" secondAttribute="bottom" id="hms-XJ-ZDG"/>
-                <constraint firstAttribute="trailing" secondItem="yr7-w6-GUM" secondAttribute="trailing" id="n4z-qk-w4G"/>
+                <constraint firstItem="RuL-yo-pVc" firstAttribute="leading" secondItem="GYn-Q4-Oz6" secondAttribute="leading" id="0Ma-WE-rD9"/>
+                <constraint firstAttribute="trailing" secondItem="RuL-yo-pVc" secondAttribute="trailing" id="C2g-mz-oJr"/>
+                <constraint firstItem="RuL-yo-pVc" firstAttribute="top" secondItem="Bbp-tm-1mo" secondAttribute="top" id="FYh-FC-tOC"/>
+                <constraint firstAttribute="bottom" secondItem="RuL-yo-pVc" secondAttribute="bottom" id="GDX-lU-qRp"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="VYb-sg-SNC"/>
+            <viewLayoutGuide key="safeArea" id="GYn-Q4-Oz6"/>
             <point key="canvasLocation" x="-488.4375" y="-273.59154929577466"/>
         </view>
     </objects>

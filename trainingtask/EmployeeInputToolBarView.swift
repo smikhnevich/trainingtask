@@ -1,15 +1,15 @@
 import UIKit
 
-class DatePickerToolBar: UIView {
+class EmployeeInputToolBar: UIView {
     
-    let nibName = "DatePickerToolBarView"
-
+    let nibName = "EmployeeInputToolBarView"
+    
     weak var delegate: TaskEditorToolBarDelegate?
     
     @IBOutlet weak var switchButton: UIBarButtonItem!
     
-    private var titleForKeyBoardState = "Календарь"
-    private var titleForDatePickerState = "Клавиатура"
+    private var titleForKeyBoardState = "Список"
+    private var titleForListState = "Клавиатура"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,7 +42,7 @@ class DatePickerToolBar: UIView {
     @IBAction func switchModeButtonPressed(_ sender: Any) {
         if switchButton.title == titleForKeyBoardState {
             delegate?.switchToList()
-            switchButton.title = titleForDatePickerState
+            switchButton.title = titleForListState
         }
         else {
             delegate?.switchToKeyboard()
@@ -50,5 +50,5 @@ class DatePickerToolBar: UIView {
         }
         
     }
-
 }
+

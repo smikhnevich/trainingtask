@@ -2,7 +2,7 @@ import UIKit
 
 class TaskDateFormatter: DateFormatter {
     
-    let format = "MMM d, yyyy"
+    let format = "dd.MM.yyyy"
     
     override init() {
         super.init()
