@@ -73,4 +73,12 @@ class ProjectInputField: UIView, TaskEditorToolBarDelegate, ProjectPickerManager
         projectInputField.text = newValue
     }
     
+    func setProjectName(name: String) {
+        projectInputField.text = name
+    }
+    
+    func projectName() -> String? {
+        return projectInputField.text
+    }
+    
 }

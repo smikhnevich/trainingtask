@@ -6,11 +6,24 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var MaxLinesNumberTextField: UITextField!
     @IBOutlet weak var DfltDaysNmbrTextField: UITextField!
     
+    private var settingsManager = SettingsManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        URLTextfield.text = "111"
-        MaxLinesNumberTextField.text = "111"
-        DfltDaysNmbrTextField.text = "111"
+        URLTextfield.isUserInteractionEnabled = false
+        MaxLinesNumberTextField.isUserInteractionEnabled = false
+        DfltDaysNmbrTextField.isUserInteractionEnabled = false
+        loadSettings()
     }
+    
+    private func loadSettings() {
+        URLTextfield.text = settingsManager.returnURL()
+        MaxLinesNumberTextField.text = String(settingsManager.returnMaxLinesNumber())
+        DfltDaysNmbrTextField.text = String(settingsManager.returnDefaultDaysNumber())
+    }
+    
+    
+    
+    
     
 }

@@ -24,6 +24,10 @@ class EmployeeInputField: UIView, EmployeePickerManagerDelegate, TaskEditorToolB
         setUpToolBar()
         setUp()
     }
+    
+    func fullName() -> String {
+        return employeeInputField.text!
+    }
 
     private func loadFromNib() -> UIView {
         var view = UIView()
@@ -75,5 +79,9 @@ class EmployeeInputField: UIView, EmployeePickerManagerDelegate, TaskEditorToolB
         employeeInputField.text?.removeAll()
         employeeInputField.inputView = nil
         employeeInputField.becomeFirstResponder()
+    }
+    
+    func setEmployeeName(name: String) {
+        employeeInputField.text = name
     }
 }

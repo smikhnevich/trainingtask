@@ -7,11 +7,24 @@ class EditEmployeeViewController: UIViewController {
     @IBOutlet weak var patronymicField: UITextField!
     @IBOutlet weak var positionField: UITextField!
     
-    private var database: Database?
+    private var employee: Employee?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if employee != nil {
+            initFromEmployee()
+        }
+    }
+    
+    func setEmployee(employee: Employee) {
+        self.employee = employee
+    }
+    
+    private func initFromEmployee() {
+        firstNameField.text = employee?.firstName
+        lastNameField.text = employee?.lastName
+        patronymicField.text = employee?.patronymic
+        positionField.text = employee?.position
     }
     
     private func databaseConnection() -> Database {

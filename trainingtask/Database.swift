@@ -40,4 +40,24 @@ class Database: NSObject {
         return dataServer.returnNumberOfEmployees()
     }
     
+    func loadTasksCountForProject(name: String) -> Int? {
+        return dataServer.returnTasksCountWithProjectName(name: name)
+    }
+    
+    func loadTaskForProject(name: String, at index: Int) -> Task? {
+        return dataServer.returnTaskForProjectName(name: name, at: index)
+    }
+    
+    func removeProjectAt(index: Int) {
+        dataServer.removeProjectAtIndex(index: index)
+    }
+    
+    func removeTaskAt(index: Int) {
+        dataServer.removeTaskAt(index: index)
+    }
+    
+    func removeEmployeeAt(index: Int) {
+        dataServer.removeEmployeeAt(index: index)
+    }
+    
 }

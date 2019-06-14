@@ -2,13 +2,25 @@ import UIKit
 
 class EditingProjectViewController: UIViewController {
     
-    
     @IBOutlet weak var projectName: UITextField!
     @IBOutlet weak var projectDiscription: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if project != nil {
+            initFromProject()
+        }
+    }
+    
+    private var project: Project?
+    
+    func setProject(project: Project) {
+        self.project = project
+    }
+    
+    private func initFromProject() {
+        projectName.text = project?.getName()
+        projectDiscription.text = project?.getDiscription()
     }
     
     private func databaseConnection() -> Database {
@@ -17,15 +29,25 @@ class EditingProjectViewController: UIViewController {
         return appDelegate.databaseConnection
     }
     
-    private func createNewProject() -> Project {
+    private func createProject() -> Project {
         let name = projectName.text!
         let discription = projectDiscription.text!
-        let newProject = Project(name: name, discription: discription)
-        return newProject
+        if project != nil {
+            let newProject = Project(name: name,
+                                     discription: discription,
+                                     tasks: project!.getTasks())
+            return newProject
+        }
+        else {
+            let newProject = Project(name: name,
+                                     discription: discription,
+                                     tasks: [Task]())
+            return newProject
+        }
     }
     
     private func uploadNewProjectToServer() {
-        let newProject = createNewProject()
+        let newProject = createProject()
         databaseConnection().loadNewProjectToServer(project: newProject)
     }
     

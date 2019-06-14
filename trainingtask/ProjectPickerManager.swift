@@ -27,7 +27,7 @@ class ProjectPickerManager: NSObject, UIPickerViewDelegate, UIPickerViewDataSour
     
     func projectNameForRow(at row: Int) -> String {
         let project = databaseConnection().loadProjectFromServer(at: row)
-        let name = project.name
+        let name = project.getName()
         return name
     }
     

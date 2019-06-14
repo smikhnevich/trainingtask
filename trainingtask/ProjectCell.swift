@@ -16,8 +16,8 @@ class ProjectCell: UITableViewCell {
     }
     
     func setProjectInfo(info: Project){
-        name.text = info.name
-        discription.text = info.discription
+        name.text = info.getName()
+        discription.text = info.getDiscription()
     }
 
 }

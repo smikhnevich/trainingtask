@@ -6,6 +6,8 @@ class DataServer: NSObject {
     private var tasks = [Task]()
     private var employees = [Employee]()
     
+    private var separator = " "
+    
     override init() {
         super.init()
         initTestData()
@@ -21,7 +23,9 @@ class DataServer: NSObject {
         var projectsNames = ["Telegram", "VK", "HearthStone", "Maps"]
         var discription = ["Мессенджер", "Социальная сеть", "Карточная игра", "Карты для навигации"]
         for i in 0..<4 {
-            let project = Project(name: projectsNames[i], discription: discription[i])
+            let project = Project(name: projectsNames[i],
+                                  discription: discription[i],
+                                  tasks: [Task]())
             projects.append(project)
         }
     }
@@ -38,19 +42,24 @@ class DataServer: NSObject {
         let taskDateFormatter = TaskDateFormatter()
         let startDate = Date()
         let endDate = taskDateFormatter.addDefaultDaysNumberToDate(date: startDate)
+        var taskNumber = 0
         for i in 0..<4{
             for j in 0..<2{
                 let taskImage = j%2 == 0 ? ("\(TaskState.active)") : "\(TaskState.closed)"
                 let executor = employees[i].lastName +
+                    separator +
                     employees[i].firstName +
+                    separator +
                     employees[i].patronymic
                 let task = Task(statusImage: taskImage,
-                                name: taskNames[j*i],
-                                projectName: projects[i].name,
+                                name: taskNames[taskNumber],
+                                projectName: projects[i].getName(),
                                 numberOfNeededHours: 30,
                                 startDate: startDate,
                                 endDate: endDate,
                                 executor: executor)
+                taskNumber += 1
+                projects[i].addTask(task: task)
                 tasks.append(task)
             }
         }
@@ -107,5 +116,34 @@ class DataServer: NSObject {
         return employees[index]
     }
     
+    func returnTasksCountWithProjectName(name: String) -> Int? {
+        for i in 0..<projects.count {
+            if projects[i].getName() == name {
+                return projects[i].tasksCount
+            }
+        }
+        return nil
+    }
+    
+    func returnTaskForProjectName(name: String, at index: Int) -> Task? {
+        for i in 0..<projects.count {
+            if projects[i].getName() == name {
+                return projects[i].taskAtIndex(index: index)
+            }
+        }
+        return nil
+    }
+    
+    func removeTaskAt(index: Int) {
+        tasks.remove(at: index)
+    }
+    
+    func removeProjectAtIndex(index: Int) {
+        projects.remove(at: index)
+    }
+    
+    func removeEmployeeAt(index: Int) {
+        employees.remove(at: index)
+    }
 }
 

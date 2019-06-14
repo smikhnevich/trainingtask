@@ -8,6 +8,10 @@ class TaskCell: UITableViewCell {
     
     @IBOutlet weak var projectName: UILabel!
     
+    func projectNameIsHidden(_ value: Bool) {
+        projectName.isHidden = value
+    }
+    
     func setTaskInfo(info: Task) {
         stateIcon.image = UIImage(named: info.statusImage)
         name.text = info.name

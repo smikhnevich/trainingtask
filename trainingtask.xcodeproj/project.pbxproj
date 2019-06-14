@@ -24,6 +24,10 @@
 		C42938F222AE881E000573BC /* ProjectsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42938F122AE881E000573BC /* ProjectsTableView.swift */; };
 		C42938F422AE8A01000573BC /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42938F322AE8A01000573BC /* ProjectCell.swift */; };
 		C42938F622AE8AFC000573BC /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42938F522AE8AFC000573BC /* ProjectCell.xib */; };
+		D1012B5F22B3B3ED004155E6 /* ProjectsManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1012B5E22B3B3ED004155E6 /* ProjectsManagerDelegate.swift */; };
+		D1012B6122B3D8B0004155E6 /* TasksManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1012B6022B3D8B0004155E6 /* TasksManagerDelegate.swift */; };
+		D1012B6322B3F86C004155E6 /* EmployeesManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1012B6222B3F86C004155E6 /* EmployeesManagerDelegate.swift */; };
+		D1012B6522B40344004155E6 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1012B6422B40344004155E6 /* SettingsManager.swift */; };
 		D104469D22AF98E80090A709 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104469C22AF98E80090A709 /* SettingsViewController.swift */; };
 		D10446A122AFBD780090A709 /* EditingProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A022AFBD780090A709 /* EditingProjectViewController.swift */; };
 		D10446A322AFCCE20090A709 /* EditingTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A222AFCCE20090A709 /* EditingTasksViewController.swift */; };
@@ -86,6 +90,10 @@
 		C42938F122AE881E000573BC /* ProjectsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableView.swift; sourceTree = "<group>"; };
 		C42938F322AE8A01000573BC /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		C42938F522AE8AFC000573BC /* ProjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectCell.xib; sourceTree = "<group>"; };
+		D1012B5E22B3B3ED004155E6 /* ProjectsManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsManagerDelegate.swift; sourceTree = "<group>"; };
+		D1012B6022B3D8B0004155E6 /* TasksManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksManagerDelegate.swift; sourceTree = "<group>"; };
+		D1012B6222B3F86C004155E6 /* EmployeesManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesManagerDelegate.swift; sourceTree = "<group>"; };
+		D1012B6422B40344004155E6 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		D104469C22AF98E80090A709 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D10446A022AFBD780090A709 /* EditingProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingProjectViewController.swift; sourceTree = "<group>"; };
 		D10446A222AFCCE20090A709 /* EditingTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTasksViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				D104469C22AF98E80090A709 /* SettingsViewController.swift */,
+				D1012B6422B40344004155E6 /* SettingsManager.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -238,12 +247,12 @@
 			name = TaskEditing;
 			sourceTree = "<group>";
 		};
-		D1061ED622B255C3003C0E9A /* Employeeediting */ = {
+		D1061ED622B255C3003C0E9A /* EmployeeEditing */ = {
 			isa = PBXGroup;
 			children = (
 				D10446AD22AFE6990090A709 /* EditEmployeeViewController.swift */,
 			);
-			name = Employeeediting;
+			name = EmployeeEditing;
 			sourceTree = "<group>";
 		};
 		D1061ED722B255F5003C0E9A /* EmployeeInput */ = {
@@ -271,13 +280,14 @@
 		D175E47322AF809200D70C0C /* Employees */ = {
 			isa = PBXGroup;
 			children = (
-				D1061ED622B255C3003C0E9A /* Employeeediting */,
+				D1061ED622B255C3003C0E9A /* EmployeeEditing */,
 				D1F84CDC22AF8B9500F36C77 /* EmployeesViewController.swift */,
 				D1F84CDE22AF8C5A00F36C77 /* EmployeesTableView.swift */,
 				D1F84CE022AF8D5C00F36C77 /* EmployeeCell.swift */,
 				D1F84CE222AF8DC500F36C77 /* EmployeeCell.xib */,
 				D1F84CE422AF90BE00F36C77 /* EmployeesManager.swift */,
 				C42938ED22AE7936000573BC /* Employee.swift */,
+				D1012B6222B3F86C004155E6 /* EmployeesManagerDelegate.swift */,
 			);
 			name = Employees;
 			sourceTree = "<group>";
@@ -305,6 +315,7 @@
 				C42938F522AE8AFC000573BC /* ProjectCell.xib */,
 				C42938E922AE7230000573BC /* Project.swift */,
 				D10446A022AFBD780090A709 /* EditingProjectViewController.swift */,
+				D1012B5E22B3B3ED004155E6 /* ProjectsManagerDelegate.swift */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -317,6 +328,7 @@
 				D1E61C4722AEA78000F668D1 /* TasksViewController.swift */,
 				D1E61C4B22AEAA4300F668D1 /* TasksTableView.swift */,
 				D1E61C4922AEA82B00F668D1 /* TasksManager.swift */,
+				D1012B6022B3D8B0004155E6 /* TasksManagerDelegate.swift */,
 				D1E61C4D22AEABA000F668D1 /* TaskState.swift */,
 				D1E61C4F22AEAD8300F668D1 /* TaskCell.swift */,
 				D1E61C5122AEADD600F668D1 /* TaskCell.xib */,
@@ -412,6 +424,7 @@
 				C42938F222AE881E000573BC /* ProjectsTableView.swift in Sources */,
 				C42938EC22AE7864000573BC /* Task.swift in Sources */,
 				D1F84CE122AF8D5C00F36C77 /* EmployeeCell.swift in Sources */,
+				D1012B6122B3D8B0004155E6 /* TasksManagerDelegate.swift in Sources */,
 				D1E61C4822AEA78000F668D1 /* TasksViewController.swift in Sources */,
 				D1E61C4322AE9B3F00F668D1 /* MenuHandlerDelegate.swift in Sources */,
 				C42938E822AE7073000573BC /* ProjectsViewController.swift in Sources */,
@@ -447,8 +460,11 @@
 				D106AD9122B0FF5C000BA454 /* DataServer.swift in Sources */,
 				D1061EC622B22EA5003C0E9A /* ProjectInputField.swift in Sources */,
 				D104469D22AF98E80090A709 /* SettingsViewController.swift in Sources */,
+				D1012B5F22B3B3ED004155E6 /* ProjectsManagerDelegate.swift in Sources */,
+				D1012B6522B40344004155E6 /* SettingsManager.swift in Sources */,
 				D10446AB22AFD9FD0090A709 /* TaskDateFormatter.swift in Sources */,
 				D1061ED422B24C12003C0E9A /* ProjectPickerManagerDelegate.swift in Sources */,
+				D1012B6322B3F86C004155E6 /* EmployeesManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

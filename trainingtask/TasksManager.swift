@@ -2,33 +2,83 @@ import UIKit
 
 class TasksManager: NSObject, ManagerProtocol {
     
-    
     private let cellIdentifier = "task"
-    private var database: Database?
+    private var tasksProject: Project?
+    private var editSegueIdentifier = "goToEditTask"
+    private var cellActions = [UITableViewRowAction]()
+    private let deleteActionTitle = "Удалить"
+    private let deleteButtonStyle = UITableViewRowAction.Style.destructive
     
-    private func connectToDataServer() {
+    weak var delegate: TasksManagerDelegate?
+    
+    private func databaseConnection() -> Database {
         let delegate = UIApplication.shared.delegate
         let appDelegate = delegate as! AppDelegate
-        database = appDelegate.databaseConnection
+        return appDelegate.databaseConnection
     }
     
     override init() {
         super.init()
-        connectToDataServer()
+        createCellActions()
     }
-
+    
+    func currentTasksProject() -> Project? {
+        return tasksProject
+    }
+    
+    func setTasksProject(project: Project) {
+        tasksProject = project
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let tasksCount = database!.loadTasksCountFromServer()
+        var tasksCount = 0
+        if let project = tasksProject {
+            tasksCount = databaseConnection().loadTasksCountForProject(name: project.getName())!
+        }
+        else {
+            tasksCount = databaseConnection().loadTasksCountFromServer()
+        }
         return tasksCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! TaskCell
-        let task = database!.loadTaskFromServer(at: indexPath.item)
-        cell.setTaskInfo(info: task)
+        var task: Task?
+        if let project = tasksProject {
+            task = databaseConnection().loadTaskForProject(name: project.getName(), at: indexPath.item)
+            cell.projectNameIsHidden(true)
+        }
+        else {
+            task = databaseConnection().loadTaskFromServer(at: indexPath.item)
+        }
+        cell.setTaskInfo(info: task!)
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.setSelected(false, animated: true)
+        var task: Task?
+        if tasksProject != nil {
+            task = tasksProject!.taskAtIndex(index: indexPath.item)
+        }
+        else {
+            task = databaseConnection().loadTaskFromServer(at: indexPath.item)
+        }
+        delegate?.shouldPerformSegue(name: editSegueIdentifier, for: task!)
+    }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        return cellActions
+    }
     
+    private func createCellActions() {
+        let deleteAction = UITableViewRowAction(style: deleteButtonStyle,
+                                                title: deleteActionTitle)
+        { (action, indexPath) in
+            self.databaseConnection().removeTaskAt(index: indexPath.item)
+            self.delegate?.shouldRemoveTableViewRow(indexPath: indexPath)
+        }
+        cellActions.append(deleteAction)
+    }
 }
