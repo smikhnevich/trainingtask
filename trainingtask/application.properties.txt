@@ -1,0 +1,3 @@
+    serverURL=url
+    maxRowsNumber=15
+    defaultDaysNumber=30

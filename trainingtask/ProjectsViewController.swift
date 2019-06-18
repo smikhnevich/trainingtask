@@ -9,9 +9,11 @@ class ProjectsViewController: UIViewController, ProjectsManagerDelegate{
     private var goToProjectTasksSegueName = "goToProjectTasks"
     
     private let projectsManager = ProjectsManager()
-    
+    private let refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpRefreshControl()
+        projectsTableView.refreshControl = refreshControl
         projectsTableView.delegate = projectsManager
         projectsTableView.dataSource = projectsManager
         projectsManager.delegate = self
@@ -41,6 +43,15 @@ class ProjectsViewController: UIViewController, ProjectsManagerDelegate{
             let vc = segue.destination as! TasksViewController
             vc.setTasksProject(project: project)
         }
+    }
+    
+    private func setUpRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    @objc private func refreshData() {
+        projectsTableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     func shouldRemoveTableViewRow(indexPath: IndexPath) {

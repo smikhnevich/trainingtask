@@ -21,25 +21,18 @@ class DateEnteringField: UIView, TaskEditorToolBarDelegate {
         dateInputField.keyboardType = .decimalPad
     }
     
-    func date() -> Date {
-        let dateString = dateInputField.text
-        let date = dateFormatter.date(from: dateString!)!
+    func date() throws -> Date {
+        
+        guard let dateString = dateInputField.text else{
+            throw TaskEditingErrors.noDate
+        }
+        guard !dateString.isEmpty else {
+            throw TaskEditingErrors.noDate
+        }
+        guard let date = dateFormatter.date(from: dateString) else {
+            throw TaskEditingErrors.wrongDate
+        }
         return date
-    }
-    
-    private func selectedDate() -> Date {
-        if let dateString = dateInputField.text {
-            if !dateString.isEmpty{
-                let date = dateFormatter.date(from: dateString)
-                return date!
-            }
-            else {
-                return Date()
-            }
-        }
-        else{
-            return Date()
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StateInputToolBar" customModule="trainingtask" customModuleProvider="target">
+            <connections>
+                <outlet property="switchButton" destination="Vu2-Yj-ZNe" id="sAW-ix-SrU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="d36-I1-Pk3">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjX-wt-F9k">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <barButtonItem title="Список" id="Vu2-Yj-ZNe">
+                            <connections>
+                                <action selector="switchModeButtonPressed:" destination="-1" id="0Pd-Lk-ubX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tjU-wk-t2p"/>
+                        <barButtonItem title="Готово" id="oxF-VU-U6E">
+                            <connections>
+                                <action selector="readyButtonPressed:" destination="-1" id="F2v-nn-zB5"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GjX-wt-F9k" firstAttribute="top" secondItem="d36-I1-Pk3" secondAttribute="top" id="RMW-f7-w4a"/>
+                <constraint firstItem="GjX-wt-F9k" firstAttribute="leading" secondItem="jqp-wo-388" secondAttribute="leading" id="d2m-LF-zbI"/>
+                <constraint firstAttribute="trailing" secondItem="GjX-wt-F9k" secondAttribute="trailing" id="g5f-SS-RkP"/>
+                <constraint firstAttribute="bottom" secondItem="GjX-wt-F9k" secondAttribute="bottom" id="lgK-0E-X63"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="jqp-wo-388"/>
+            <point key="canvasLocation" x="-488.4375" y="-273.59154929577466"/>
+        </view>
+    </objects>
+</document>

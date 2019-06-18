@@ -3,6 +3,7 @@ import UIKit
 class Database: NSObject {
     
     let dataServer = DataServer()
+    let settings = SettingsManager()
     
     func loadNewProjectToServer(project: Project) {
         dataServer.getNewProject(project: project)
@@ -52,8 +53,8 @@ class Database: NSObject {
         dataServer.removeProjectAtIndex(index: index)
     }
     
-    func removeTaskAt(index: Int) {
-        dataServer.removeTaskAt(index: index)
+    func removeTaskAt(index: Int, project: Project?) {
+        dataServer.removeTaskAt(index: index, project: project)
     }
     
     func removeEmployeeAt(index: Int) {

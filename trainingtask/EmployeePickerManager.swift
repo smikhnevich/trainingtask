@@ -14,9 +14,9 @@ class EmployeePickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     private func fullNameInString(employee: Employee) -> String {
-        let lastName = employee.lastName
-        let firstName = employee.firstName
-        let patronymic = employee.patronymic
+        let lastName = employee.getLastName()
+        let firstName = employee.getFirstName()
+        let patronymic = employee.getPatronymic()
         return lastName + separator + firstName + separator + patronymic
     }
     
@@ -45,14 +45,5 @@ class EmployeePickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDeleg
         let name = employeeFullNameForRow(at: row)
         delegate?.valueChanged(newValue: name)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

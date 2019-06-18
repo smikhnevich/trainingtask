@@ -23,6 +23,12 @@ class ProjectsManager: NSObject, ManagerProtocol {
         return appDelegate.databaseConnection
     }
     
+    private func settingsConnection() -> SettingsManager {
+        let delegate = UIApplication.shared.delegate
+        let appDelegate = delegate as! AppDelegate
+        return appDelegate.settingsConnection
+    }
+    
     override init(){
         super.init()
         createActions()
@@ -35,7 +41,13 @@ class ProjectsManager: NSObject, ManagerProtocol {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let projectsCount = databaseConnection().loadProjectsCountFromServer()
-        return projectsCount
+        let maxRowsNumber = settingsConnection().returnMaxLinesNumber()
+        if projectsCount <= maxRowsNumber {
+            return projectsCount
+        }
+        else {
+            return maxRowsNumber
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

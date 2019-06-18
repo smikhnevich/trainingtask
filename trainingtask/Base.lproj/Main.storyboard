@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="146" y="98"/>
         </scene>
-        <!--Title-->
+        <!--Задачи-->
         <scene sceneID="bK5-Np-ZdN">
             <objects>
                 <viewController id="OLS-d5-Z5n" customClass="TasksViewController" customModule="trainingtask" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VNO-Gi-rBe"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="HgW-eS-crw">
+                    <navigationItem key="navigationItem" title="Задачи" id="HgW-eS-crw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Say-Og-AWv">
                             <connections>
                                 <segue destination="MNV-ap-0ds" kind="popoverPresentation" identifier="goToEditTask" popoverAnchorBarButtonItem="Say-Og-AWv" id="x3S-uK-I4n">
@@ -127,7 +127,7 @@
                                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2a-TK-FfF">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                 <items>
-                                                    <navigationItem title="Title" id="Egb-vN-9un">
+                                                    <navigationItem id="Egb-vN-9un">
                                                         <barButtonItem key="leftBarButtonItem" title="Отмена" id="3js-sm-tiY">
                                                             <connections>
                                                                 <action selector="cancelAction:" destination="MNV-ap-0ds" id="2uT-5Y-5vd"/>
@@ -247,17 +247,17 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXn-hP-blx">
-                                                <rect key="frame" x="10" y="388" width="394" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-nN-vn9" customClass="StateInputField" customModule="trainingtask" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="388" width="414" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="KGg-gV-sYw"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="ecy-g7-mBN" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" id="0mt-NO-Gbk"/>
-                                            <constraint firstItem="96t-iQ-RUA" firstAttribute="top" secondItem="hXn-hP-blx" secondAttribute="bottom" constant="2" id="1sE-L0-kIG"/>
                                             <constraint firstAttribute="trailing" secondItem="8UV-9g-gO8" secondAttribute="trailing" constant="10" id="333-hk-QAM"/>
                                             <constraint firstItem="aij-ff-KtT" firstAttribute="top" secondItem="jZR-0M-n3i" secondAttribute="bottom" constant="2" id="3Rv-fo-s2u"/>
                                             <constraint firstItem="B2a-TK-FfF" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" id="3Rx-hb-KIp"/>
@@ -265,6 +265,7 @@
                                             <constraint firstAttribute="trailing" secondItem="ecy-g7-mBN" secondAttribute="trailing" id="5L1-QL-0gi"/>
                                             <constraint firstAttribute="trailing" secondItem="M4T-Sg-drQ" secondAttribute="trailing" constant="10" id="6BB-ze-ryd"/>
                                             <constraint firstAttribute="trailing" secondItem="Rec-wS-0P0" secondAttribute="trailing" id="7fX-aM-hn6"/>
+                                            <constraint firstItem="6fH-nN-vn9" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" id="8cc-3b-4Al"/>
                                             <constraint firstItem="aD3-EZ-B9j" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" id="9fy-EN-izZ"/>
                                             <constraint firstItem="ecy-g7-mBN" firstAttribute="top" secondItem="5Zw-9g-9ct" secondAttribute="bottom" constant="2" id="BMc-5L-JhU"/>
                                             <constraint firstItem="jZR-0M-n3i" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="BY1-Ak-Shx"/>
@@ -274,12 +275,10 @@
                                             <constraint firstAttribute="bottom" secondItem="aD3-EZ-B9j" secondAttribute="bottom" constant="468" id="FsV-9z-4xU"/>
                                             <constraint firstItem="B2a-TK-FfF" firstAttribute="top" secondItem="KDq-C3-40A" secondAttribute="top" id="I1T-rQ-uCC"/>
                                             <constraint firstItem="Rjn-W7-anB" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="IAo-s2-Igd"/>
-                                            <constraint firstItem="hXn-hP-blx" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="IhJ-We-YYT"/>
                                             <constraint firstItem="jZR-0M-n3i" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="InM-1D-SQd"/>
                                             <constraint firstItem="Rec-wS-0P0" firstAttribute="top" secondItem="M4T-Sg-drQ" secondAttribute="bottom" constant="2" id="Jyn-1i-XYt"/>
                                             <constraint firstAttribute="trailing" secondItem="96t-iQ-RUA" secondAttribute="trailing" constant="10" id="K9Z-xk-9Zw"/>
                                             <constraint firstAttribute="trailing" secondItem="jZR-0M-n3i" secondAttribute="trailing" constant="10" id="Kuf-yG-gNz"/>
-                                            <constraint firstItem="hXn-hP-blx" firstAttribute="top" secondItem="77v-8F-kmi" secondAttribute="bottom" constant="2" id="MMz-TA-Sq3"/>
                                             <constraint firstItem="96t-iQ-RUA" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="Nfg-rT-Z0Z"/>
                                             <constraint firstItem="77v-8F-kmi" firstAttribute="top" secondItem="BkV-2A-2ug" secondAttribute="bottom" constant="2" id="RFy-19-HHR"/>
                                             <constraint firstItem="77v-8F-kmi" firstAttribute="top" secondItem="BkV-2A-2ug" secondAttribute="bottom" constant="2" id="Rny-CA-3br"/>
@@ -299,16 +298,18 @@
                                             <constraint firstItem="8UV-9g-gO8" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="cAg-Q7-tSX"/>
                                             <constraint firstAttribute="trailing" secondItem="77v-8F-kmi" secondAttribute="trailing" constant="10" id="cKy-gI-6db"/>
                                             <constraint firstItem="77v-8F-kmi" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="cPG-5a-Y8Q"/>
+                                            <constraint firstAttribute="trailing" secondItem="6fH-nN-vn9" secondAttribute="trailing" id="ca2-T3-Iel"/>
                                             <constraint firstItem="8UV-9g-gO8" firstAttribute="top" secondItem="Rec-wS-0P0" secondAttribute="bottom" constant="2" id="cmr-ZI-OrU"/>
-                                            <constraint firstAttribute="trailing" secondItem="hXn-hP-blx" secondAttribute="trailing" constant="10" id="dA8-oi-PzF"/>
                                             <constraint firstAttribute="trailing" secondItem="Rjn-W7-anB" secondAttribute="trailing" constant="10" id="fSH-yh-bur"/>
                                             <constraint firstItem="8UV-9g-gO8" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="fw2-To-Fpw"/>
                                             <constraint firstItem="jZR-0M-n3i" firstAttribute="top" secondItem="B2a-TK-FfF" secondAttribute="bottom" constant="2" id="gID-AL-uK4"/>
                                             <constraint firstItem="aD3-EZ-B9j" firstAttribute="top" secondItem="96t-iQ-RUA" secondAttribute="bottom" constant="2" id="haa-jS-TZn"/>
                                             <constraint firstItem="Rec-wS-0P0" firstAttribute="top" secondItem="M4T-Sg-drQ" secondAttribute="bottom" constant="2" id="ht3-vx-hJp"/>
                                             <constraint firstItem="aij-ff-KtT" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" constant="10" id="iKw-FX-my5"/>
+                                            <constraint firstItem="96t-iQ-RUA" firstAttribute="top" secondItem="6fH-nN-vn9" secondAttribute="bottom" constant="2" id="k0h-CS-Hev"/>
                                             <constraint firstItem="AdQ-x4-PsA" firstAttribute="top" secondItem="8UV-9g-gO8" secondAttribute="bottom" constant="2" id="kC6-6O-tGU"/>
                                             <constraint firstItem="Rec-wS-0P0" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" id="ksl-hU-EtG"/>
+                                            <constraint firstItem="6fH-nN-vn9" firstAttribute="top" secondItem="77v-8F-kmi" secondAttribute="bottom" constant="2" id="l6e-7q-YQh"/>
                                             <constraint firstAttribute="trailing" secondItem="AdQ-x4-PsA" secondAttribute="trailing" constant="10" id="lRE-PB-G5f"/>
                                             <constraint firstItem="ecy-g7-mBN" firstAttribute="top" secondItem="5Zw-9g-9ct" secondAttribute="bottom" constant="2" id="lXy-d0-Ibi"/>
                                             <constraint firstItem="B2a-TK-FfF" firstAttribute="leading" secondItem="KDq-C3-40A" secondAttribute="leading" id="ljh-di-WH1"/>
@@ -348,7 +349,7 @@
                         <outlet property="executorPicker" destination="aD3-EZ-B9j" id="MbW-cJ-CHn"/>
                         <outlet property="numberOfNeededHoursField" destination="AdQ-x4-PsA" id="0ZA-XK-ZyQ"/>
                         <outlet property="startDatePicker" destination="ecy-g7-mBN" id="FOh-Hc-YD3"/>
-                        <outlet property="statusInputField" destination="hXn-hP-blx" id="RTP-Uo-yCq"/>
+                        <outlet property="stateInputField" destination="6fH-nN-vn9" id="Amz-pO-zPI"/>
                         <outlet property="taskNameField" destination="aij-ff-KtT" id="d48-28-a3j"/>
                         <outlet property="tasksProjectNameField" destination="Rec-wS-0P0" id="4IM-e6-KGB"/>
                     </connections>
@@ -357,7 +358,7 @@
             </objects>
             <point key="canvasLocation" x="2457.971014492754" y="47.544642857142854"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Настройки-->
         <scene sceneID="CqM-UU-FFh">
             <objects>
                 <viewController id="3gJ-cC-wB1" customClass="SettingsViewController" customModule="trainingtask" customModuleProvider="target" sceneMemberID="viewController">
@@ -445,17 +446,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ALZ-ub-bWX"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Настройки" id="YRL-wM-aoU">
+                        <barButtonItem key="rightBarButtonItem" title="Ред." id="1ll-Tp-Ncr">
+                            <connections>
+                                <action selector="editAction:" destination="3gJ-cC-wB1" id="wrl-0u-D7W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="DfltDaysNmbrTextField" destination="i8G-72-WkK" id="PLj-5Z-Xlz"/>
                         <outlet property="MaxLinesNumberTextField" destination="SXL-v0-Sd4" id="szd-qd-mpf"/>
                         <outlet property="URLTextfield" destination="MOT-5J-aGt" id="0kJ-wu-0zF"/>
+                        <outlet property="editButton" destination="1ll-Tp-Ncr" id="kfz-Qz-FF5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2I-2U-9FF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="1292"/>
         </scene>
-        <!--Title-->
+        <!--Сотрудники-->
         <scene sceneID="xQe-Ut-oy2">
             <objects>
                 <viewController id="oLO-c5-bFY" customClass="EmployeesViewController" customModule="trainingtask" customModuleProvider="target" sceneMemberID="viewController">
@@ -487,7 +496,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qTz-2f-9rv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="BvU-4T-es6">
+                    <navigationItem key="navigationItem" title="Сотрудники" id="BvU-4T-es6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4c8-pd-at3">
                             <connections>
                                 <segue destination="zcv-se-ipP" kind="popoverPresentation" identifier="goToEmployeeEditing" popoverAnchorBarButtonItem="4c8-pd-at3" id="wS0-by-OLF">
@@ -515,7 +524,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYN-HS-4ld">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="qTv-uP-8Hp">
+                                    <navigationItem id="qTv-uP-8Hp">
                                         <barButtonItem key="leftBarButtonItem" title="Отмена" id="H3J-1C-Zu5">
                                             <connections>
                                                 <action selector="CancelAction:" destination="zcv-se-ipP" id="l1b-vr-eyE"/>
@@ -650,7 +659,7 @@
             </objects>
             <point key="canvasLocation" x="2457.971014492754" y="807.58928571428567"/>
         </scene>
-        <!--Title-->
+        <!--Проекты-->
         <scene sceneID="ixh-Dj-Yh0">
             <objects>
                 <viewController id="gTN-Lw-6Qy" customClass="ProjectsViewController" customModule="trainingtask" customModuleProvider="target" sceneMemberID="viewController">
@@ -682,7 +691,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LF5-AP-Vvr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="0Ek-Zz-gwZ">
+                    <navigationItem key="navigationItem" title="Проекты" id="0Ek-Zz-gwZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Dpu-Od-6zS">
                             <connections>
                                 <segue destination="IBa-19-C5v" kind="popoverPresentation" identifier="goToEdit" popoverAnchorBarButtonItem="Dpu-Od-6zS" id="fNs-rY-Ab4">
@@ -711,7 +720,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5f7-GJ-LQS">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="php-yU-X1E">
+                                    <navigationItem id="php-yU-X1E">
                                         <barButtonItem key="leftBarButtonItem" title="Отмена" id="DGi-sx-3ih">
                                             <connections>
                                                 <action selector="cancelPressed:" destination="IBa-19-C5v" id="Owk-lk-3HT"/>
@@ -794,6 +803,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9o0-nl-hxX"/>
+        <segue reference="7wA-5f-yXr"/>
     </inferredMetricsTieBreakers>
 </document>

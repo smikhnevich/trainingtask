@@ -23,10 +23,10 @@ class EmployeeCell: UITableViewCell {
     }
     
     func setEmployeeInfo(info: Employee) {
-        firstNameLabel.text = info.firstName
-        lastNameLabel.text = info.lastName
-        patronymicLabel.text = info.patronymic
-        positionLabel.text = info.position
+        firstNameLabel.text = info.getFirstName()
+        lastNameLabel.text = info.getLastName()
+        patronymicLabel.text = info.getPatronymic()
+        positionLabel.text = info.getPosition()
     }
     
 }

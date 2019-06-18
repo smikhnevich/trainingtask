@@ -17,6 +17,12 @@ class TasksManager: NSObject, ManagerProtocol {
         return appDelegate.databaseConnection
     }
     
+    private func settingsConnection() -> SettingsManager {
+        let delegate = UIApplication.shared.delegate
+        let appDelegate = delegate as! AppDelegate
+        return appDelegate.settingsConnection
+    }
+    
     override init() {
         super.init()
         createCellActions()
@@ -31,14 +37,26 @@ class TasksManager: NSObject, ManagerProtocol {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var tasksCount = 0
+        let tasksCount = rowsNumber()
+        return tasksCount
+    }
+    
+    private func rowsNumber() -> Int {
+        var tasksCount = Int()
         if let project = tasksProject {
             tasksCount = databaseConnection().loadTasksCountForProject(name: project.getName())!
         }
         else {
             tasksCount = databaseConnection().loadTasksCountFromServer()
         }
-        return tasksCount
+        let maxRowsNumber = settingsConnection().returnMaxLinesNumber()
+        if tasksCount <= maxRowsNumber {
+            return tasksCount
+        }
+        else {
+            return maxRowsNumber
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,7 +94,7 @@ class TasksManager: NSObject, ManagerProtocol {
         let deleteAction = UITableViewRowAction(style: deleteButtonStyle,
                                                 title: deleteActionTitle)
         { (action, indexPath) in
-            self.databaseConnection().removeTaskAt(index: indexPath.item)
+            self.databaseConnection().removeTaskAt(index: indexPath.item, project: self.tasksProject)
             self.delegate?.shouldRemoveTableViewRow(indexPath: indexPath)
         }
         cellActions.append(deleteAction)

@@ -5,9 +5,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    private var settings = SettingsManager()
     private var database = Database()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //sleep(5)
         return true
     }
 
@@ -33,6 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var databaseConnection: Database {
         return database
+    }
+    
+    var settingsConnection: SettingsManager {
+        return settings
     }
 
 

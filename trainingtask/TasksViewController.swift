@@ -6,10 +6,13 @@ class TasksViewController: UIViewController, TasksManagerDelegate {
     
     @IBOutlet weak var tasksTableView: TasksTableView!
     
+    private let refreshControl = UIRefreshControl()
     private var editSegueIdentifier = "goToEditTask"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpRefreshControl()
+        tasksTableView.refreshControl = refreshControl
         tasksTableView.delegate = tasksManager
         tasksTableView.dataSource = tasksManager
         tasksManager.delegate = self
@@ -24,18 +27,22 @@ class TasksViewController: UIViewController, TasksManagerDelegate {
         tasksManager.setTasksProject(project: project)
     }
     
+    func shouldPerformSegue(name: String, for task: Task) {
+        performSegue(withIdentifier: name, sender: task)
+    }
+    
+    //перепроектировать
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == editSegueIdentifier {
-            if let task = sender as? Task {
-                if let project = tasksManager.currentTasksProject() {
+            if let project = tasksManager.currentTasksProject() {
+                if let task = sender as? Task {
                     performWith(segue: segue, task: task, project: project)
                 }
                 else {
-                    performWithTask(segue: segue, task: task)
+                    performWithProject(segue: segue, project: project)
                 }
-            }
-            else {
-                return
+            } else if let task = sender as? Task {
+                performWithTask(segue: segue, task: task)
             }
         }
     }
@@ -51,13 +58,18 @@ class TasksViewController: UIViewController, TasksManagerDelegate {
         vc.setTaskForEditing(task: task)
     }
     
-    private func createWithProject(segue: UIStoryboardSegue, project: Project) {
+    private func performWithProject(segue: UIStoryboardSegue, project: Project) {
         let vc = segue.destination as! EditingTasksViewController
         vc.setTasksProjectName(name: project.getName())
     }
-
-    func shouldPerformSegue(name: String, for task: Task) {
-        performSegue(withIdentifier: name, sender: task)
+    
+    private func setUpRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    @objc private func refreshData() {
+        tasksTableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     func shouldRemoveTableViewRow(indexPath: IndexPath) {

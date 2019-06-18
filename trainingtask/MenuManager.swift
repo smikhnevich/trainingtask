@@ -8,12 +8,6 @@ class MenuManager: NSObject, ManagerProtocol{
     
     private var seguesIdentifiers = ["goToProjects", "goToTasks", "goToEmployees", "goToSettings"]
     
-    /*
-    private let projectsSegueName = "goToProjects"
-    private let tasksSegueName = "goToTask"
-    private let employeesSegueName = "goToEmployees"
-     */
- 
     var delegate: MenuHandlerDelegate?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

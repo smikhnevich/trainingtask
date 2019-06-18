@@ -36,8 +36,53 @@ class Project{
         return tasks
     }
     
-    func addTask(task: Task) {
+    func add(task: Task) {
         tasks.append(task)
+    }
+    
+    func contains(task: Task) -> Bool {
+        if tasks.contains(where: { (projTask) -> Bool in
+                                if projTask == task {
+                                    return true
+                                }
+                                else{
+                                    return false
+                                }
+                        })
+        {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    func remove(task: Task) {
+        tasks.removeAll { (projTask) -> Bool in
+            if projTask == task {
+                return true
+            }
+            else{
+                return false
+            }
+        }
+    }
+    
+    func set(name: String) {
+        self.name = name
+    }
+
+    func set(discription: String) {
+        self.discription = discription
+    }
+    
+    static func == (left: Project, right: Project) -> Bool {
+        if left.index == right.index {
+            return true
+        }
+        else {
+            return false
+        }
     }
 
 }

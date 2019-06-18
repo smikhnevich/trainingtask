@@ -28,6 +28,25 @@
 		D1012B6122B3D8B0004155E6 /* TasksManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1012B6022B3D8B0004155E6 /* TasksManagerDelegate.swift */; };
 		D1012B6322B3F86C004155E6 /* EmployeesManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1012B6222B3F86C004155E6 /* EmployeesManagerDelegate.swift */; };
 		D1012B6522B40344004155E6 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1012B6422B40344004155E6 /* SettingsManager.swift */; };
+		D101C47F22B900AE00B25F66 /* DataServerErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D101C47E22B900AE00B25F66 /* DataServerErrors.swift */; };
+		D101C48322B938A700B25F66 /* DefaultToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D101C48222B938A700B25F66 /* DefaultToolBar.swift */; };
+		D101C48622B93BBC00B25F66 /* BarButtonItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D101C48522B93BBC00B25F66 /* BarButtonItemDelegate.swift */; };
+		D101C48822B93FB000B25F66 /* DefaultToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D101C48722B93FB000B25F66 /* DefaultToolBarView.xib */; };
+		D1040D9222B7717A0055864A /* application.properties.txt in Resources */ = {isa = PBXBuildFile; fileRef = D1040D9122B771790055864A /* application.properties.txt */; };
+		D1040D9422B7730A0055864A /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040D9322B7730A0055864A /* FileManager.swift */; };
+		D1040D9622B79F0D0055864A /* TaskEditingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040D9522B79F0D0055864A /* TaskEditingErrors.swift */; };
+		D1040D9922B7AC7C0055864A /* StatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040D9822B7AC7C0055864A /* StatePickerView.swift */; };
+		D1040D9D22B7ADA20055864A /* StateInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040D9C22B7ADA20055864A /* StateInputField.swift */; };
+		D1040D9F22B7AF6C0055864A /* StateInputToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1040D9E22B7AF6C0055864A /* StateInputToolBarView.xib */; };
+		D1040DA222B7AFB20055864A /* StateInputToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040DA122B7AFB20055864A /* StateInputToolBar.swift */; };
+		D1040DA422B7B1410055864A /* StateInputField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1040DA322B7B1410055864A /* StateInputField.xib */; };
+		D1040DA622B7B2360055864A /* StatePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040DA522B7B2360055864A /* StatePickerManager.swift */; };
+		D1040DA822B7B3370055864A /* StatePickerManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040DA722B7B3370055864A /* StatePickerManagerDelegate.swift */; };
+		D1040DAA22B7BF270055864A /* TaskEditingErorrMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040DA922B7BF270055864A /* TaskEditingErorrMessages.swift */; };
+		D1040DAC22B7CFAB0055864A /* EdtingEmployeesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040DAB22B7CFAB0055864A /* EdtingEmployeesError.swift */; };
+		D1040DAE22B7D11D0055864A /* EditEmployeeErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040DAD22B7D11D0055864A /* EditEmployeeErrorMessages.swift */; };
+		D1040DB122B7D5F40055864A /* ProjectEditingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040DB022B7D5F40055864A /* ProjectEditingErrors.swift */; };
+		D1040DB322B7D6020055864A /* ProjectEditingErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1040DB222B7D6020055864A /* ProjectEditingErrorMessages.swift */; };
 		D104469D22AF98E80090A709 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104469C22AF98E80090A709 /* SettingsViewController.swift */; };
 		D10446A122AFBD780090A709 /* EditingProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A022AFBD780090A709 /* EditingProjectViewController.swift */; };
 		D10446A322AFCCE20090A709 /* EditingTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10446A222AFCCE20090A709 /* EditingTasksViewController.swift */; };
@@ -55,6 +74,8 @@
 		D106AD9122B0FF5C000BA454 /* DataServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106AD9022B0FF5C000BA454 /* DataServer.swift */; };
 		D106AD9322B113B0000BA454 /* DateEnteringField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106AD9222B113B0000BA454 /* DateEnteringField.swift */; };
 		D106AD9922B11DC8000BA454 /* DateEnteringField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D106AD9822B11DC8000BA454 /* DateEnteringField.xib */; };
+		D1082F2222B8BCBC00A15686 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1082F2122B8BCBC00A15686 /* ProgressView.swift */; };
+		D1082F2522B8BD4500A15686 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1082F2422B8BD4500A15686 /* ProgressView.xib */; };
 		D175E47522AF862300D70C0C /* ManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175E47422AF862300D70C0C /* ManagerProtocol.swift */; };
 		D1E61C4322AE9B3F00F668D1 /* MenuHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E61C4222AE9B3F00F668D1 /* MenuHandlerDelegate.swift */; };
 		D1E61C4822AEA78000F668D1 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E61C4722AEA78000F668D1 /* TasksViewController.swift */; };
@@ -94,6 +115,25 @@
 		D1012B6022B3D8B0004155E6 /* TasksManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksManagerDelegate.swift; sourceTree = "<group>"; };
 		D1012B6222B3F86C004155E6 /* EmployeesManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesManagerDelegate.swift; sourceTree = "<group>"; };
 		D1012B6422B40344004155E6 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		D101C47E22B900AE00B25F66 /* DataServerErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServerErrors.swift; sourceTree = "<group>"; };
+		D101C48222B938A700B25F66 /* DefaultToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultToolBar.swift; sourceTree = "<group>"; };
+		D101C48522B93BBC00B25F66 /* BarButtonItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemDelegate.swift; sourceTree = "<group>"; };
+		D101C48722B93FB000B25F66 /* DefaultToolBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultToolBarView.xib; sourceTree = "<group>"; };
+		D1040D9122B771790055864A /* application.properties.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = application.properties.txt; sourceTree = "<group>"; };
+		D1040D9322B7730A0055864A /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		D1040D9522B79F0D0055864A /* TaskEditingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditingErrors.swift; sourceTree = "<group>"; };
+		D1040D9822B7AC7C0055864A /* StatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePickerView.swift; sourceTree = "<group>"; };
+		D1040D9C22B7ADA20055864A /* StateInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInputField.swift; sourceTree = "<group>"; };
+		D1040D9E22B7AF6C0055864A /* StateInputToolBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateInputToolBarView.xib; sourceTree = "<group>"; };
+		D1040DA122B7AFB20055864A /* StateInputToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateInputToolBar.swift; sourceTree = "<group>"; };
+		D1040DA322B7B1410055864A /* StateInputField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateInputField.xib; sourceTree = "<group>"; };
+		D1040DA522B7B2360055864A /* StatePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePickerManager.swift; sourceTree = "<group>"; };
+		D1040DA722B7B3370055864A /* StatePickerManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePickerManagerDelegate.swift; sourceTree = "<group>"; };
+		D1040DA922B7BF270055864A /* TaskEditingErorrMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditingErorrMessages.swift; sourceTree = "<group>"; };
+		D1040DAB22B7CFAB0055864A /* EdtingEmployeesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdtingEmployeesError.swift; sourceTree = "<group>"; };
+		D1040DAD22B7D11D0055864A /* EditEmployeeErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmployeeErrorMessages.swift; sourceTree = "<group>"; };
+		D1040DB022B7D5F40055864A /* ProjectEditingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEditingErrors.swift; sourceTree = "<group>"; };
+		D1040DB222B7D6020055864A /* ProjectEditingErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEditingErrorMessages.swift; sourceTree = "<group>"; };
 		D104469C22AF98E80090A709 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D10446A022AFBD780090A709 /* EditingProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingProjectViewController.swift; sourceTree = "<group>"; };
 		D10446A222AFCCE20090A709 /* EditingTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTasksViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +161,8 @@
 		D106AD9022B0FF5C000BA454 /* DataServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServer.swift; sourceTree = "<group>"; };
 		D106AD9222B113B0000BA454 /* DateEnteringField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEnteringField.swift; sourceTree = "<group>"; };
 		D106AD9822B11DC8000BA454 /* DateEnteringField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateEnteringField.xib; path = ../../DateEnteringField.xib; sourceTree = "<group>"; };
+		D1082F2122B8BCBC00A15686 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		D1082F2422B8BD4500A15686 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		D175E47422AF862300D70C0C /* ManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerProtocol.swift; sourceTree = "<group>"; };
 		D1E61C4222AE9B3F00F668D1 /* MenuHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHandlerDelegate.swift; sourceTree = "<group>"; };
 		D1E61C4722AEA78000F668D1 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
@@ -167,8 +209,10 @@
 			isa = PBXGroup;
 			children = (
 				C42938CD22AE64D5000573BC /* AppDelegate.swift */,
-				D10446A822AFD5BF0090A709 /* Database.swift */,
-				D106AD9022B0FF5C000BA454 /* DataServer.swift */,
+				D101C48422B93B7D00B25F66 /* DefaultToolBar */,
+				D101C48022B904F500B25F66 /* Database */,
+				D101C47D22B9009000B25F66 /* DataServer */,
+				D1082F2322B8BD1F00A15686 /* ProgressView */,
 				D104469B22AF987B0090A709 /* Settings */,
 				D175E47322AF809200D70C0C /* Employees */,
 				D1E61C4422AEA3E800F668D1 /* Menu */,
@@ -183,11 +227,72 @@
 			path = trainingtask;
 			sourceTree = "<group>";
 		};
+		D101C47D22B9009000B25F66 /* DataServer */ = {
+			isa = PBXGroup;
+			children = (
+				D106AD9022B0FF5C000BA454 /* DataServer.swift */,
+				D101C47E22B900AE00B25F66 /* DataServerErrors.swift */,
+			);
+			name = DataServer;
+			sourceTree = "<group>";
+		};
+		D101C48022B904F500B25F66 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D10446A822AFD5BF0090A709 /* Database.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		D101C48422B93B7D00B25F66 /* DefaultToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				D101C48222B938A700B25F66 /* DefaultToolBar.swift */,
+				D101C48522B93BBC00B25F66 /* BarButtonItemDelegate.swift */,
+				D101C48722B93FB000B25F66 /* DefaultToolBarView.xib */,
+			);
+			name = DefaultToolBar;
+			sourceTree = "<group>";
+		};
+		D1040D9722B7A7F20055864A /* StateInput */ = {
+			isa = PBXGroup;
+			children = (
+				D1040DA022B7AF9B0055864A /* StateInputToolBar */,
+				D1040D9822B7AC7C0055864A /* StatePickerView.swift */,
+				D1040D9C22B7ADA20055864A /* StateInputField.swift */,
+				D1040DA322B7B1410055864A /* StateInputField.xib */,
+				D1040DA522B7B2360055864A /* StatePickerManager.swift */,
+				D1040DA722B7B3370055864A /* StatePickerManagerDelegate.swift */,
+			);
+			name = StateInput;
+			sourceTree = "<group>";
+		};
+		D1040DA022B7AF9B0055864A /* StateInputToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				D1040D9E22B7AF6C0055864A /* StateInputToolBarView.xib */,
+				D1040DA122B7AFB20055864A /* StateInputToolBar.swift */,
+			);
+			name = StateInputToolBar;
+			sourceTree = "<group>";
+		};
+		D1040DAF22B7D5DB0055864A /* EditingProject */ = {
+			isa = PBXGroup;
+			children = (
+				D10446A022AFBD780090A709 /* EditingProjectViewController.swift */,
+				D1040DB022B7D5F40055864A /* ProjectEditingErrors.swift */,
+				D1040DB222B7D6020055864A /* ProjectEditingErrorMessages.swift */,
+			);
+			name = EditingProject;
+			sourceTree = "<group>";
+		};
 		D104469B22AF987B0090A709 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				D104469C22AF98E80090A709 /* SettingsViewController.swift */,
 				D1012B6422B40344004155E6 /* SettingsManager.swift */,
+				D1040D9322B7730A0055864A /* FileManager.swift */,
+				D1040D9122B771790055864A /* application.properties.txt */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -238,11 +343,14 @@
 		D1061ED522B25514003C0E9A /* TaskEditing */ = {
 			isa = PBXGroup;
 			children = (
+				D1040D9722B7A7F20055864A /* StateInput */,
 				D1061ED722B255F5003C0E9A /* EmployeeInput */,
 				D1061EBE22B22D9E003C0E9A /* ProjectInput */,
 				D10446AC22AFE2AC0090A709 /* DateInput */,
 				D1061EC822B234A4003C0E9A /* TaskEditorToolBarDelegate.swift */,
 				D10446A222AFCCE20090A709 /* EditingTasksViewController.swift */,
+				D1040D9522B79F0D0055864A /* TaskEditingErrors.swift */,
+				D1040DA922B7BF270055864A /* TaskEditingErorrMessages.swift */,
 			);
 			name = TaskEditing;
 			sourceTree = "<group>";
@@ -251,6 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				D10446AD22AFE6990090A709 /* EditEmployeeViewController.swift */,
+				D1040DAB22B7CFAB0055864A /* EdtingEmployeesError.swift */,
+				D1040DAD22B7D11D0055864A /* EditEmployeeErrorMessages.swift */,
 			);
 			name = EmployeeEditing;
 			sourceTree = "<group>";
@@ -275,6 +385,15 @@
 				D1061EE722B27DD3003C0E9A /* EmployeeInputToolBarView.swift */,
 			);
 			name = EmployeeInputToolbar;
+			sourceTree = "<group>";
+		};
+		D1082F2322B8BD1F00A15686 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				D1082F2122B8BCBC00A15686 /* ProgressView.swift */,
+				D1082F2422B8BD4500A15686 /* ProgressView.xib */,
+			);
+			name = ProgressView;
 			sourceTree = "<group>";
 		};
 		D175E47322AF809200D70C0C /* Employees */ = {
@@ -308,13 +427,13 @@
 		D1E61C4522AEA42200F668D1 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				D1040DAF22B7D5DB0055864A /* EditingProject */,
 				C42938E722AE7073000573BC /* ProjectsViewController.swift */,
 				C42938F122AE881E000573BC /* ProjectsTableView.swift */,
 				C42938EF22AE8572000573BC /* ProjectsManager.swift */,
 				C42938F322AE8A01000573BC /* ProjectCell.swift */,
 				C42938F522AE8AFC000573BC /* ProjectCell.xib */,
 				C42938E922AE7230000573BC /* Project.swift */,
-				D10446A022AFBD780090A709 /* EditingProjectViewController.swift */,
 				D1012B5E22B3B3ED004155E6 /* ProjectsManagerDelegate.swift */,
 			);
 			name = Projects;
@@ -394,19 +513,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1040D9F22B7AF6C0055864A /* StateInputToolBarView.xib in Resources */,
 				C42938D822AE64D7000573BC /* LaunchScreen.storyboard in Resources */,
+				D101C48822B93FB000B25F66 /* DefaultToolBarView.xib in Resources */,
 				D1F84CE322AF8DC500F36C77 /* EmployeeCell.xib in Resources */,
 				C42938D522AE64D7000573BC /* Assets.xcassets in Resources */,
 				D1061EC422B22E97003C0E9A /* ProjectInputField.xib in Resources */,
 				C42938E422AE684D000573BC /* MainMenuOptionCell.xib in Resources */,
 				D1061ECB22B238DE003C0E9A /* ProjectInputToolBarView.xib in Resources */,
 				C42938F622AE8AFC000573BC /* ProjectCell.xib in Resources */,
+				D1082F2522B8BD4500A15686 /* ProgressView.xib in Resources */,
 				D1E61C5222AEADD600F668D1 /* TaskCell.xib in Resources */,
+				D1040DA422B7B1410055864A /* StateInputField.xib in Resources */,
 				D104926E22B13BE800F557D2 /* DatePickerToolBarView.xib in Resources */,
 				D106AD9922B11DC8000BA454 /* DateEnteringField.xib in Resources */,
 				D1061EE622B27D9F003C0E9A /* EmployeeInputToolBarView.xib in Resources */,
 				C42938D322AE64D5000573BC /* Main.storyboard in Resources */,
 				D1061EDF22B25C6C003C0E9A /* EmployeeNameInputFieldView.xib in Resources */,
+				D1040D9222B7717A0055864A /* application.properties.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,8 +545,11 @@
 				D10446A122AFBD780090A709 /* EditingProjectViewController.swift in Sources */,
 				D10446A922AFD5BF0090A709 /* Database.swift in Sources */,
 				D1F84CE522AF90BE00F36C77 /* EmployeesManager.swift in Sources */,
+				D1040DA222B7AFB20055864A /* StateInputToolBar.swift in Sources */,
 				C42938F222AE881E000573BC /* ProjectsTableView.swift in Sources */,
 				C42938EC22AE7864000573BC /* Task.swift in Sources */,
+				D101C48322B938A700B25F66 /* DefaultToolBar.swift in Sources */,
+				D1040DB322B7D6020055864A /* ProjectEditingErrorMessages.swift in Sources */,
 				D1F84CE122AF8D5C00F36C77 /* EmployeeCell.swift in Sources */,
 				D1012B6122B3D8B0004155E6 /* TasksManagerDelegate.swift in Sources */,
 				D1E61C4822AEA78000F668D1 /* TasksViewController.swift in Sources */,
@@ -431,38 +558,51 @@
 				D1061ECD22B23C2D003C0E9A /* ProjectInputToolBar.swift in Sources */,
 				D1E61C4A22AEA82B00F668D1 /* TasksManager.swift in Sources */,
 				C42938E022AE6724000573BC /* MainMenuTableView.swift in Sources */,
+				D1040D9D22B7ADA20055864A /* StateInputField.swift in Sources */,
+				D1040DAC22B7CFAB0055864A /* EdtingEmployeesError.swift in Sources */,
 				D1061EDD22B25693003C0E9A /* EmployeePickerManager.swift in Sources */,
 				D1E61C4C22AEAA4300F668D1 /* TasksTableView.swift in Sources */,
 				D1061EE822B27DD3003C0E9A /* EmployeeInputToolBarView.swift in Sources */,
 				C42938E222AE682E000573BC /* MainMenuOptionCell.swift in Sources */,
 				D175E47522AF862300D70C0C /* ManagerProtocol.swift in Sources */,
+				D1040DA822B7B3370055864A /* StatePickerManagerDelegate.swift in Sources */,
 				C42938D022AE64D5000573BC /* MainMenuViewController.swift in Sources */,
 				D1061ED222B24C01003C0E9A /* ProjectPickerManager.swift in Sources */,
 				D1F84CDF22AF8C5A00F36C77 /* EmployeesTableView.swift in Sources */,
 				C42938F422AE8A01000573BC /* ProjectCell.swift in Sources */,
+				D1040DAA22B7BF270055864A /* TaskEditingErorrMessages.swift in Sources */,
 				C42938CE22AE64D5000573BC /* AppDelegate.swift in Sources */,
 				C42938F022AE8572000573BC /* ProjectsManager.swift in Sources */,
 				D1061EC022B22DCA003C0E9A /* ProjectPicker.swift in Sources */,
 				D1061ED922B25648003C0E9A /* EmployeeInputField.swift in Sources */,
 				D104926A22B1394E00F557D2 /* DatePickerToolBar.swift in Sources */,
 				D104927022B149D200F557D2 /* DateEnteringFieldDelegate.swift in Sources */,
+				D101C47F22B900AE00B25F66 /* DataServerErrors.swift in Sources */,
 				C42938EA22AE7230000573BC /* Project.swift in Sources */,
+				D1040D9922B7AC7C0055864A /* StatePickerView.swift in Sources */,
+				D1040D9622B79F0D0055864A /* TaskEditingErrors.swift in Sources */,
 				D1061EE322B27D60003C0E9A /* EmployeePickerManagerDelegate.swift in Sources */,
+				D1040DAE22B7D11D0055864A /* EditEmployeeErrorMessages.swift in Sources */,
+				D1040D9422B7730A0055864A /* FileManager.swift in Sources */,
 				D1061EDB22B2565C003C0E9A /* EmployeePickerView.swift in Sources */,
 				C42938E622AE6CB6000573BC /* MenuManager.swift in Sources */,
 				D1E61C5022AEAD8300F668D1 /* TaskCell.swift in Sources */,
 				D1F84CDD22AF8B9500F36C77 /* EmployeesViewController.swift in Sources */,
+				D1040DA622B7B2360055864A /* StatePickerManager.swift in Sources */,
 				D1E61C4E22AEABA000F668D1 /* TaskState.swift in Sources */,
 				D106AD9322B113B0000BA454 /* DateEnteringField.swift in Sources */,
 				D1061EC922B234A4003C0E9A /* TaskEditorToolBarDelegate.swift in Sources */,
 				D10446AE22AFE6990090A709 /* EditEmployeeViewController.swift in Sources */,
+				D1082F2222B8BCBC00A15686 /* ProgressView.swift in Sources */,
 				D10446A322AFCCE20090A709 /* EditingTasksViewController.swift in Sources */,
 				D106AD9122B0FF5C000BA454 /* DataServer.swift in Sources */,
+				D101C48622B93BBC00B25F66 /* BarButtonItemDelegate.swift in Sources */,
 				D1061EC622B22EA5003C0E9A /* ProjectInputField.swift in Sources */,
 				D104469D22AF98E80090A709 /* SettingsViewController.swift in Sources */,
 				D1012B5F22B3B3ED004155E6 /* ProjectsManagerDelegate.swift in Sources */,
 				D1012B6522B40344004155E6 /* SettingsManager.swift in Sources */,
 				D10446AB22AFD9FD0090A709 /* TaskDateFormatter.swift in Sources */,
+				D1040DB122B7D5F40055864A /* ProjectEditingErrors.swift in Sources */,
 				D1061ED422B24C12003C0E9A /* ProjectPickerManagerDelegate.swift in Sources */,
 				D1012B6322B3F86C004155E6 /* EmployeesManagerDelegate.swift in Sources */,
 			);

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefaultToolBar" customModule="trainingtask" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="Li9-3P-xjR">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6D-dZ-MUH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="FvU-wo-mxM"/>
+                        <barButtonItem title="Готово" id="kiT-mf-hX6">
+                            <connections>
+                                <action selector="readyPressed:" destination="-1" id="i6E-1M-oMP"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="k6D-dZ-MUH" secondAttribute="bottom" id="IiZ-Zb-gJD"/>
+                <constraint firstItem="k6D-dZ-MUH" firstAttribute="trailing" secondItem="lqA-7c-jjv" secondAttribute="trailing" id="b8z-Hd-HhE"/>
+                <constraint firstItem="k6D-dZ-MUH" firstAttribute="leading" secondItem="lqA-7c-jjv" secondAttribute="leading" id="gIt-IZ-XOm"/>
+                <constraint firstItem="k6D-dZ-MUH" firstAttribute="top" secondItem="Li9-3P-xjR" secondAttribute="top" id="lf0-RO-dDq"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="lqA-7c-jjv"/>
+            <point key="canvasLocation" x="-488.4375" y="-273.59154929577466"/>
+        </view>
+    </objects>
+</document>

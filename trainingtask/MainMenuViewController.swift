@@ -14,7 +14,7 @@ class MainMenuViewController: UIViewController, MenuHandlerDelegate {
     }
 
     func shouldPerformSegue(_ menuHandler: MenuManager, segueIdentifier: String) {
-        performSegue(withIdentifier: segueIdentifier, sender: nil)
+        self.performSegue(withIdentifier: segueIdentifier, sender: nil)
     }
     
 }

@@ -2,17 +2,19 @@ import Foundation
 
 class SettingsManager {
     
-    
     private var url = String()
-    private var maxLinesNumber = Int()
+    private var maxRowsNumber = Int()
     private var defaultDaysNumber = Int()
+    private var fileManager = FileManager()
     
     private var keyForURL = "url"
     private var keyForMaxLinesNumber = "maxLinesNumber"
     private var keyForDefaultDaysNumber = "defaultDaysNumber"
     
     init() {
-        loadSettings()
+        if !loadFromUserPreferenses() {
+            loadFromDefaults()
+        }
     }
     
     func returnURL() -> String {
@@ -20,19 +22,18 @@ class SettingsManager {
     }
     
     func returnMaxLinesNumber() -> Int {
-        return maxLinesNumber
+        return maxRowsNumber
     }
     
     func returnDefaultDaysNumber() -> Int {
         return defaultDaysNumber
     }
-    
-    private func loadSettings() {
-        loadFromUserPreferenses()
-    }
+
     
     private func loadFromDefaults() {
-        //c файла
+        url = fileManager.getServerURL()
+        maxRowsNumber = fileManager.getMaxRowsNumber()
+        defaultDaysNumber = fileManager.getDefaultDaysNumber()
     }
     
     private func loadFromUserPreferenses() -> Bool {
@@ -44,13 +45,16 @@ class SettingsManager {
             return false
         }
         if let maxLinesNumber = ud.object(forKey: keyForMaxLinesNumber) as? Int {
-            self.maxLinesNumber = maxLinesNumber
+            self.maxRowsNumber = maxLinesNumber
         }
         else {
             return false
         }
         if let defaultDaysNumber = ud.object(forKey: keyForDefaultDaysNumber) as? Int{
             self.defaultDaysNumber = defaultDaysNumber
+        }
+        else{
+            return false
         }
         return true
     }

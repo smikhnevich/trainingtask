@@ -5,11 +5,14 @@ class EmployeesViewController: UIViewController, EmployeesManagerDelegate {
     @IBOutlet weak var employeesTableView: EmployeesTableView!
     
     private let employeesManager = EmployeesManager()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpRefreshControl()
         employeesTableView.delegate = employeesManager
         employeesTableView.dataSource = employeesManager
+        employeesTableView.refreshControl = refreshControl
         employeesManager.delegate = self
     }
     
@@ -24,6 +27,15 @@ class EmployeesViewController: UIViewController, EmployeesManagerDelegate {
     
     func shouldPerformSegueWith(identifier: String, for employee: Employee?) {
         performSegue(withIdentifier: identifier, sender: employee)
+    }
+    
+    private func setUpRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    @objc private func refreshData() {
+        employeesTableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

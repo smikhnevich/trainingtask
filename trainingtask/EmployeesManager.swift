@@ -23,9 +23,21 @@ class EmployeesManager: NSObject, ManagerProtocol {
         return appDelegate.databaseConnection
     }
     
+    private func settingsConnection() -> SettingsManager {
+        let delegate = UIApplication.shared.delegate
+        let appDelegate = delegate as! AppDelegate
+        return appDelegate.settingsConnection
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let employeesNumber = databaseConnection().loadEmployeesCountFromServer()
-        return employeesNumber
+        let maxRowsNumber = settingsConnection().returnMaxLinesNumber()
+        if employeesNumber <= maxRowsNumber {
+            return employeesNumber
+        }
+        else{
+            return maxRowsNumber
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

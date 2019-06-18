@@ -13,9 +13,9 @@ class TaskCell: UITableViewCell {
     }
     
     func setTaskInfo(info: Task) {
-        stateIcon.image = UIImage(named: info.statusImage)
-        name.text = info.name
-        projectName.text = info.projectName
+        stateIcon.image = UIImage(named: info.getStatus())
+        name.text = info.getName()
+        projectName.text = info.getProjectName()
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
